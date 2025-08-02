@@ -1,0 +1,58 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=1.75cm]{geometry}
+\usepackage{tabularx}
+\usepackage{array}
+
+% Useful packages
+\usepackage{amsmath}
+
+% Owen's Packages
+\usepackage{tabularx}
+
+\begin{document}
+\flushright{\Large Name: \rule{2in}{0.4pt}}\\
+\vspace{0.3in}
+\centering{\huge Math Worksheet Template}
+\vspace{0.2in}
+
+
+{\centering \Large
+\begin{tabularx}{0.99\textwidth} {
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X | }
+  
+ \hline
+{%- for i in range(10) -%}
+{%-   set jj = 10 -%}
+{%-   for j in range(jj - 1) %}
+ $ \begin{array}{r} {{num[0]}} \\ \times {{jj * i + j}} \\ \hline \\ \end{array} $ &
+{%-   endfor %}
+ $ \begin{array}{r} {{num[0]}} \\ \times {{jj * i + jj - 1}} \\ \hline \\ \end{array} $ \\
+ \hline
+{%- endfor %}
+\end{tabularx}
+}
+
+
+\flushright{
+N = 9 \hspace{0.5in}
+Checksum: \texttt{0xDEADBEEF}
+}
+
+
+\end{document}
